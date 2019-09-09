@@ -3,9 +3,11 @@ package com.terry.gridlayout
 import android.app.Activity
 import android.graphics.Color
 import android.os.Bundle
-import android.view.View
+import android.view.Gravity
 import android.view.ViewGroup
+import android.widget.FrameLayout
 import android.widget.SeekBar
+import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : Activity() , SeekBar.OnSeekBarChangeListener {
@@ -53,10 +55,17 @@ class MainActivity : Activity() , SeekBar.OnSeekBarChangeListener {
         val params = ViewGroup.LayoutParams(- 2 , - 2)
         params.height = height
         for (index in 0 .. count) {
-            val view = View(this)
-            view.setBackgroundColor(Color.parseColor("#3866FE"))
-            view.layoutParams = params
-            gridlayout.addView(view)
+            val layout = FrameLayout(this)
+            val tv = TextView(this)
+            val subParams = FrameLayout.LayoutParams(- 1 , - 1)
+            subParams.gravity = Gravity.CENTER
+            tv.layoutParams = subParams
+            tv.setTextColor(Color.WHITE)
+            tv.setText("ITEM$index")
+            layout.addView(tv)
+            layout.setBackgroundColor(Color.parseColor("#3866FE"))
+            layout.layoutParams = params
+            gridlayout.addView(layout)
         }
         gridlayout.setDividerHeight(div)
         gridlayout.setColumns(col)

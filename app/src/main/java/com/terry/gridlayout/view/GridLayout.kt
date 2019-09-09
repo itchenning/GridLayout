@@ -44,6 +44,15 @@ class GridLayout(context : Context , attrs : AttributeSet) : ViewGroup(context ,
         val rows = if (childCount % mColumns == 0) childCount / mColumns else childCount / mColumns + 1
         val width = measureWidthExactly()
         setMeasuredDimension(width , rows * height + mDividerHeight * (rows - 1))
+        measureChildrenExactly(widthMeasureSpec , heightMeasureSpec)
+    }
+
+    private fun measureChildrenExactly(widthMeasureSpec : Int , heightMeasureSpec : Int) {
+        measureChildren(widthMeasureSpec , heightMeasureSpec)
+        for (index in 0 until childCount) {
+            val child = getChildAt(index)
+            if (child is ViewGroup) child.measure(0 , 0)
+        }
     }
 
     private fun measureWidthExactly() : Int {
