@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="列数"
+            android:textColor="#000000" />
+
+        <SeekBar
+            android:id="@+id/colSeekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:progress="50"
+            android:maxHeight="5dp"
+            android:progressDrawable="@drawable/seekbar_style"
+            android:thumb="@drawable/selector_seekbar"
+            android:thumbOffset="0dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll1"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="分隔"
+            android:textColor="#000000" />
+
+        <SeekBar
+            android:id="@+id/divSeekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:progress="50"
+            android:maxHeight="5dp"
+            android:progressDrawable="@drawable/seekbar_style"
+            android:thumb="@drawable/selector_seekbar"
+            android:thumbOffset="0dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll2"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="个数"
+            android:textColor="#000000" />
+
+        <SeekBar
+            android:id="@+id/countSeekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:progress="50"
+            android:layout_marginEnd="20dp"
+            android:maxHeight="5dp"
+            android:progressDrawable="@drawable/seekbar_style"
+            android:thumb="@drawable/selector_seekbar"
+            android:thumbOffset="0dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll3"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="高度"
+            android:textColor="#000000" />
+
+        <SeekBar
+            android:id="@+id/heightSeekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:progress="50"
+            android:maxHeight="5dp"
+            android:progressDrawable="@drawable/seekbar_style"
+            android:thumb="@drawable/selector_seekbar"
+            android:thumbOffset="0dp" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll4"
+        android:layout_marginTop="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.terry.gridlayout.view.GridLayout
+                android:id="@+id/gridlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="#E7EAEC"
+                app:columns="2"
+                app:divider_height="3dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#3866FE" />
+
+
+            </com.terry.gridlayout.view.GridLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
