@@ -6,24 +6,24 @@
 # 用法
 
 
-	  		<com.terry.gridlayout.view.GridLayout
-                android:id="@+id/gridlayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:background="#E7EAEC"
-                app:columns="2"
-                app:divider_height="3dp">
+	<com.terry.gridlayout.view.GridLayout
+		android:id="@+id/gridlayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="15dp"
+		android:background="#E7EAEC"
+		app:columns="2"
+		app:divider_height="3dp">
 
-					<View...>
-					<View...>
-					<View...>
-					<View...>
-					<View...>
-					<View...>
+		<View...>
+		<View...>
+		<View...>
+		<View...>
+		<View...>
+		<View...>
 
 
-            </com.terry.gridlayout.view.GridLayout>
+	</com.terry.gridlayout.view.GridLayout>
 
 
 # 属性
