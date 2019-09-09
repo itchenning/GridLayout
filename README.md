@@ -1,7 +1,10 @@
 # 一个自定义的N宫格View
 --------------------
 
-![](screenshot.gif)
+
+ <img src="screenshot.gif" width = 40% height = 40% div align=righgt/>
+
+
 
 # 用法
 
